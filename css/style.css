@@ -291,7 +291,7 @@ project_section
 .project-section .container{
     width: 85%; 
     margin: auto;
-    padding-top: 25vh;
+    padding-top: 22vh;
 }
 
 .project-section .row{
@@ -401,7 +401,7 @@ project_section
 @media screen and (max-width:800px) {
     .big-luna-logo{
         flex: 0 0 65%;
-        height: 37vh;
+        height: 32vh;
         margin-bottom: 20px;
     }
 
@@ -411,7 +411,7 @@ project_section
     }
 
     .project-section-text h1{
-        font-size: 29px;
+        font-size: 32px;
         line-height: 40px;
     }
 
@@ -430,6 +430,11 @@ project_section
     .project-section .container{
         width: 100%; 
         margin: auto;
+    }
+
+    .logo img{
+        width: 150px;
+        height: auto;
     }
 }
 
