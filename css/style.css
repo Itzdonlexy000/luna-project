@@ -1,0 +1,440 @@
+/* ------------
+Global_stles
+-------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* border: 2px solid blue; */
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    margin: auto;
+    width: 1100px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* ------------- 
+navigation_bar
+----------------*/
+
+nav{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 11vh;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo img{
+    width: 250px;
+    height: auto;
+}
+
+nav li{
+    list-style: none;
+}
+
+.nav-links{
+    display: flex;
+    width: 53%;
+    justify-content: space-between;
+}
+
+.media-logo{
+    display: none;
+}
+
+nav .nav-links li a{
+    font-size: 18px;
+    color: white;
+    position: relative;
+}
+
+.nav-links li a:hover{
+    color: #38CEB3;
+}
+
+.nav-links a:before{
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #38CEB3;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .4s linear;
+}
+
+#p-active{
+    color: #38CEB3;
+}
+
+#p-active::before{
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #38CEB3;
+    transform: scaleX(1);
+}
+
+.nav-links a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+
+#buy{
+    color: #38CEB3;
+    padding: 8px 25px;
+    background-color: #EFF0F4;
+    clip-path: polygon(87% 0, 100% 50%, 88% 100%, 14% 100%, 0% 50%, 15% 0);
+}
+
+.swap-btn{
+    padding: 10px 25px;
+    font-weight: bold;
+    background-color: white;
+    color: #38CEB3;
+    clip-path: polygon(87% 0, 100% 50%, 88% 100%, 14% 100%, 0% 50%, 15% 0);
+    display: none;
+}
+
+.animate-nav .swap-btn{
+    background-color: #3554A6;
+    color: white;
+}
+
+nav.animate-nav{
+    background: white;
+}
+
+.animate-nav #buy {
+    background-color: #3554A6;
+    color: white;
+}
+
+nav.animate-nav .nav-links li a{
+    color: rgb(117, 116, 116);
+}
+
+.burger div {
+    width: 23px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.animate-nav .burger div {
+    width: 23px;
+    height: 3px;
+    background-color: black;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.burger{
+    display: none;
+}
+
+@media screen and (max-width:1100px) {
+    body{
+        position: relative;
+    }
+    .burger{
+        display: block;
+    }
+    .nav-links{
+        padding: 20px 20px;
+        position: absolute;
+        right: 0;
+        top: 11vh;
+        height: 89vh;
+        background: white;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    nav .nav-links li a{
+        color: black;
+    }
+
+    #buy{
+        display: none;
+    }
+    .media-logo{
+        display: block;
+        color: #3554A6;
+        font-size: 23px;
+    }
+    .swap-btn{
+        display: block;
+    }
+    nav .nav-links li a:hover{
+        color: black;
+    }
+
+    .nav-links a:hover:before{
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    #p-active{
+        color: black;
+    }
+    
+    #p-active::before{
+        position: absolute;
+        content: '';
+        bottom: -3px;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background: #38CEB3;
+        transform: scaleX(0);
+    }
+    
+    
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+   transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* -------------------------------------------------------------------
+project_section
+------------------------------------------------------------------------ */
+
+.project-section{
+    max-width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(-45deg,#61B2E4 40% , #6293E5 40% 60%, #7483EC 60% 80%, #6169E7 80% 100%);
+}
+
+.project-section .star{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: animateStar 20s ease-in-out infinite;
+}
+
+.project-section .star1{
+    animation-delay: 0s;
+    background: url(../images/star1.png);
+}
+
+.project-section .star2{
+    animation-delay: -1s;
+    background: url(../images/star2.png);
+}
+
+.project-section .star3{
+    animation-delay: -2s;
+    background: url(../images/star3.png); 
+}
+
+.project-section .star4{
+    animation-delay: -3s;
+    background: url(../images/star5.png);
+}
+
+
+
+
+@keyframes animateStar {
+    0%, 20%,40%,60%,80%,100%
+    {
+        opacity: 0;
+    }
+
+    10%,30%,50%,70%,90%
+    {
+        opacity: 1;
+    }
+}
+
+.project-section .container{
+    width: 85%; 
+    margin: auto;
+    padding-top: 25vh;
+}
+
+.project-section .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+.project-section .project-section-text{
+    flex:  0 0 60%; 
+    max-width: 90%;
+    margin: auto;
+    min-height: 300px;
+    margin-bottom: 40px; 
+}
+
+.project-section-text h1{
+    font-size: 36px;
+    color: transparent;
+    line-height: 50px;
+    -webkit-text-stroke: 1px white;
+    background: url(../images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 15s linear infinite;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+@keyframes back {
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+.project-section-text p{
+    color: white;
+    font-size: 19px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+
+
+.telegram {
+    padding: 10px 27px;
+    clip-path: polygon(87% 0, 100% 50%, 88% 100%, 14% 100%, 0% 50%, 15% 0);
+    background-color: white;
+    color: #38CEB3;
+}
+
+.buy-now {
+    padding: 10px 27px;
+    clip-path: polygon(87% 0, 100% 50%, 88% 100%, 14% 100%, 0% 50%, 15% 0);
+    background-color: #6169E7;
+    color: white;
+}
+
+.partners{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px; 
+    max-width: 420px;
+    padding: 17px 30px;
+    background-color: #3554A6;
+    clip-path: polygon(5% 0, 96% 0, 100% 50%, 96% 100%, 4% 100%, 0% 50%);
+}
+
+.partners img{
+    width: 40px;
+    height: 40px;
+}
+
+.lik{
+    margin-bottom: 20px;
+}
+
+.big-luna-logo{
+    position: relative;
+    background-color: rgba(255,255,255, .4);
+    border-radius: 30px;
+    flex: 0 0 40%; 
+    margin: auto;
+    height: 400px;
+    animation-name: big-logo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes big-logo {
+    from{
+        left: 3%;
+    }
+    to{
+        left: -3%;
+    }
+}
+.big-luna-logo img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+@media screen and (max-width:800px) {
+    .big-luna-logo{
+        flex: 0 0 65%;
+        height: 37vh;
+        margin-bottom: 20px;
+    }
+
+    .project-section-text{  
+        flex:  0 0 100%; 
+        text-align: center;
+    }
+
+    .project-section-text h1{
+        font-size: 29px;
+        line-height: 40px;
+    }
+
+    .project-section-text p{
+        font-size: 16px;
+    }
+
+    .partners{
+        width: 100%;
+        margin: auto;
+    }
+    .partners img{
+       max-width: 25px;
+       height: 25px;
+    }
+    .project-section .container{
+        width: 100%; 
+        margin: auto;
+    }
+}
+
+.scam{
+    width: 100%;
+    height: 100vh;
+    background: pink;
+}
