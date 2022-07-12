@@ -445,7 +445,7 @@ about_section
 
 
 .about{
-    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
     background: #3756A6;
     padding: 50px 20px;
@@ -467,4 +467,78 @@ about_section
     width: 100px;
     border-radius: 7px;
     background-color: #38CEB3;
+}
+
+.about span{
+    color: #38CEB3;
+}
+
+.about a {
+    font-weight: bold;
+    background-color: #EFF0F4;
+    padding: 10px 20px;
+    color: #3554A6;
+    clip-path: polygon(87% 0, 100% 50%, 88% 100%, 14% 100%, 0% 50%, 15% 0);
+}
+
+.about .vee{
+    padding: 20px 0;
+}
+.about-text h1{
+    font-size: 28px;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #38CEB3;
+}
+
+.about-text p{
+    color: white;
+}
+
+.about .container{
+    margin-top: 10vh;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-text{
+    word-wrap: break-word;
+    flex:  0 0 60%; 
+    max-width: 95%;
+    width: 600px;
+    margin: auto;
+    min-height: 300px;
+    margin-bottom: 40px; 
+    line-height: 25px;
+}
+
+.astronut{
+    flex: 0 0 40%; 
+    margin: auto;
+    height: 100%;
+}
+
+.astronut img{
+    max-width: 100%;
+    min-height: 90%;
+}
+
+@media screen and (max-width:900px) {
+    .about-text{
+        flex: 0 0 100%;
+        word-break: normal;
+    }
+    .astronut{
+        flex: 0 0 100%;
+    }
+    .astronut img{
+        max-width: 100%;
+        /* display: block; */
+    }
 }
