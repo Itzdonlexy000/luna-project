@@ -438,8 +438,33 @@ project_section
     }
 }
 
-.scam{
+
+/* -----------------------------------------------------------------
+about_section
+-------------------------------------------------------------------- */
+
+
+.about{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #3756A6;
+    padding: 50px 20px;
+}
+
+.about .title{
+    text-align: center;
+}
+
+.about .title h1{
+    font-size: 27px;
+    color: #38CEB3;
+    margin-bottom: 17px;
+}
+
+.about .line{
+    height: 7px;
+    margin: auto;
+    width: 100px;
+    border-radius: 7px;
+    background-color: #38CEB3;
 }
