@@ -690,12 +690,11 @@ ROAD_MAP_SECTION_STARTS
     padding: 20px;
     max-width: 1200px;
     min-height: 400px;
-    /* border: 2px solid white; */
-
 }
 
 .road-map .contain{
     display: flex;
+    position: relative;
 }
 
 .contain::-webkit-scrollbar{
@@ -703,18 +702,28 @@ ROAD_MAP_SECTION_STARTS
 }
 
 .overflow{
-    /* border-top: 2px solid #EFF0F4; */
     border-right: 2px solid #EFF0F4;
     flex: 0 0 33.3%;
     width: 400px;
     height: 340px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
+
 
 .road-map li{
     margin-bottom: 10px;
     list-style-type: circle;
+}
+
+.mark a{
+    padding-left: 10px;
+    color: #c4c4c9;
+}
+
+.mark li::marker{
+    content: '\2713';
 }
 
 .slide-title{
@@ -725,10 +734,6 @@ ROAD_MAP_SECTION_STARTS
     color: #38CEB3;
     font-size: 26px;
     padding: 10px 20px;
-}
-
-.slide-cnt a{
-    /* display: inline-block; */
 }
 
 .slide-cnt{
@@ -747,4 +752,11 @@ ROAD_MAP_SECTION_STARTS
     .road-map .container{
         width: 90vw;
     }
+}
+
+.fa-diamond{
+    color: #38CEB3;
+    position: absolute;
+    top: 24px;
+    right: -20px;
 }
