@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+     integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>Home</title>
@@ -212,7 +220,103 @@
         </div>
         <div class="line" data-aos="fade-up"></div>
 
+        <div class="container">
+            <div class="contain scroll">
 
+
+            <div class="overflow">
+                <div class="slide-title">
+                    <h2>Phase 1</h2>
+                </div>
+                
+                <div class="slide-cnt">
+                <li><a>contract creation & fair lunch</a></li>
+                <li><a>website creation</a></li>
+                <li><a>social media channels</a></li>
+                <li><a>eLuna swap creation</a></li>
+                <li><a>first marketing wave</a></li>
+                </div>
+
+            </div>
+            <div class="overflow slider">
+
+                <div class="slide-title">
+                    <h2>Phase 2</h2>
+                </div>
+
+                <div class="slide-cnt">
+                    <li><a>KYC with a reputable platform</a></li>
+                    <li><a>Staking DAPP Lunch</a></li>
+                    <li><a>CMC & CG Listing</a></li>
+                    <li><a>NFT Design and Listing</a></li>
+                </div>
+
+            </div>
+            <div class="overflow slider">
+
+                <div class="slide-title">
+                    <h2>Phase 3</h2>
+                </div>
+
+                <div class="slide-cnt">
+                    <li><a>Android & IOS App final development</a></li>
+                    <li><a>Final agreement for implementation of digital card payments</a></li>
+                    <li><a>ETH and other blockchain bridge (eLuna bridge)</a></li>
+                </div>
+
+            </div>
+            <div class="overflow slider">
+
+                <div class="slide-title">
+                    <h2>Phase 4</h2>
+                </div>
+
+                <div class="slide-cnt">
+                    <li><a>coming very soon</a></li>
+                    <li><a>coming very soon</a></li>
+                    <li><a>coming very soon</a></li>
+                    <li><a>coming very soon</a></li>
+                    <li><a>comingvery soon</a></li>
+                </div>
+
+            </div>
+            <div class="overflow slider">
+
+                <div class="slide-title">
+                    <h2>Phase 5</h2>
+                </div>
+
+                <div class="slide-cnt">
+                    <li><a>coming very soon</a></li>
+                    <li><a>coming very soon</a></li>
+                    <li><a>coming very soon</a></li>
+                    <li><a>coming very soon</a></li>
+                    <li><a>comingvery soon</a></li>
+                </div>
+
+            </div>
+            <div class="overflow slider">
+
+                <div class="slide-title">
+                    <h2>Phase 6</h2>
+                </div>
+
+                <div class="slide-cnt">
+                    <li><a>coming very soon</a></li>
+                    <li><a>coming very soon</a></li>
+                    <li><a>coming very soon</a></li>
+                    <li><a>coming very soon</a></li>
+                    <li><a>comingvery soon</a></li>
+                </div>
+
+            </div>
+            
+            </div>
+        </div>
+
+
+
+       
     </section>
 
 
@@ -224,13 +328,63 @@
 
 
     <script src="java/index.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" 
+    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="https://use.fontawesome.com/8b7b9f4138.js"></script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
         AOS.init({
             offset: 200,
             duration: 1000
         });
+
+
+        $('.scroll').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+            });
+                           
+
+                            
+
     </script>
     
 </body>
