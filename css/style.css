@@ -733,7 +733,7 @@ ROAD_MAP_SECTION_STARTS
 .slide-title h2{
     color: #38CEB3;
     font-size: 26px;
-    padding: 10px 20px;
+    padding: 2px 0px 2px 35px;
 }
 
 .slide-cnt{
@@ -757,6 +757,17 @@ ROAD_MAP_SECTION_STARTS
 .fa-diamond{
     color: #38CEB3;
     position: absolute;
-    top: 24px;
+    top: 7px;
     right: -20px;
+}
+
+/* ------------------------------------------------------------------------------------------------
+FOOTER_SECTION_STARTS
+--------------------------------------------------------------------------------------------------- */
+
+.footer{
+    width: 100%;
+    height: 100vh;
+    border-top-left-radius: 50px;
+    background-color: #717FEB;
 }
