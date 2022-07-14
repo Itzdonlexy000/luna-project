@@ -661,7 +661,7 @@ ROAD_MAP_SECTION_STARTS
 
 .road-map{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #3554A6;
 }
 
@@ -683,6 +683,7 @@ ROAD_MAP_SECTION_STARTS
     width: 100px;
     border-radius: 7px;
     background-color: #38CEB3;
+    margin-bottom: 20vh;
 }
 
 .road-map .container{
