@@ -70,7 +70,7 @@ nav .nav-links li a{
 .nav-links a:before{
     position: absolute;
     content: '';
-    bottom: -3px;
+    bottom: -6px;
     left: 0;
     height: 3px;
     width: 100%;
@@ -87,7 +87,7 @@ nav .nav-links li a{
 #p-active::before{
     position: absolute;
     content: '';
-    bottom: -3px;
+    bottom: -6px;
     left: 0;
     height: 3px;
     width: 100%;
@@ -250,11 +250,11 @@ project_section
     width: 100%;
     height: 100%;
     pointer-events: none;
-    animation: animateStar 20s ease-in-out infinite;
+    animation: animateStar 10s ease-in-out infinite;
 }
 
 .project-section .star1{
-    animation-delay: 0s;
+    animation-delay: 0;
     background: url(../images/star1.png);
 }
 
@@ -661,8 +661,15 @@ ROAD_MAP_SECTION_STARTS
 
 .road-map{
     width: 100%;
-    min-height: 100vh;
+    height: fit-content;
     background-color: #3554A6;
+    /* padding-bottom: 40vh; */
+}
+
+@media screen and (max-width:790px) {
+    .road-map{
+        padding-bottom: 50vh;
+    }
 }
 
 .road-map .title{
@@ -744,14 +751,10 @@ ROAD_MAP_SECTION_STARTS
     color: #EFF0F4;
 }
 
-.slide-cnt a{
-    /* margin-bottom: 10px; */
-}
-
-@media screen and (max-width:1100px) {
+@media screen and (max-width:1000px) {
     .road-map .container{
         width: 90vw;
-    }
+     }
 }
 
 .fa-diamond{
@@ -767,7 +770,160 @@ FOOTER_SECTION_STARTS
 
 .footer{
     width: 100%;
-    height: 100vh;
-    border-top-left-radius: 50px;
-    background-color: #717FEB;
+    min-height: 100vh;
+    background-color: #3554A6;
+    position: relative;
+    }
+
+.big-container{
+    width: 100%;
+    position: absolute;
+    min-height: 400px;
+    bottom: 0;
+    left: 0;
+    border-top-left-radius: 120px;
+    background-color: #7280EB;
 }
+
+.footer .container{
+    margin-top: 15vh;
+    max-width: 90vw;
+    min-height: 270px;
+}
+
+.small-logo{
+    flex: 0 0 33.3%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links{
+    flex: 0 0 33.3%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socials{
+    flex: 0 0 33.3%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width:800px) {
+
+    .small-logo{
+        flex: 0 0 100%;
+        padding: 10px 0;
+    }
+
+    .links{
+        flex: 0 0 100%;
+        padding: 10px;
+    }
+
+    .socials{
+        padding: 10px;
+        flex: 0 0 100%;
+    }
+
+    .socials .circle{
+        display: inline-block;
+    }
+}
+
+.small-logo h1{
+    padding-top: 10px;
+    color: white;
+    font-weight: 200;
+}
+
+.small-logo img{
+    max-width: 230px;
+    background-color: rgba(255,255,255, .4);
+    border-radius: 20px;
+    min-height: 100%;
+}
+
+.socials .icon{
+    width: 100%;
+    height: 100%
+}
+
+.socials .circle{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 50px;
+    background-color: #EFEFEF;
+    text-align: center;
+    line-height: 62px;
+}
+
+.link-title{
+    margin-bottom: 20px;
+}
+
+.link-title h3{
+    color: white;
+    font-size: 22px;
+    font-weight: 200;
+}
+
+.links p{
+    color: white;
+    padding: 7px 0;
+}
+
+.link-line{
+    margin: 5px 0;
+    position: relative;
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #38CEB3;
+    overflow: hidden;
+}
+.link-line::before{
+    content: '';
+    bottom: 0;
+    position: absolute;
+    border-radius: 5px;
+    left: 3px;
+    background-color: white;
+    width: 23%;
+    height: 100%;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+hr{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.end{
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
