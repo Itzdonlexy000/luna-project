@@ -9,6 +9,10 @@ Global_stles
     /* border: 2px solid blue; */
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none;
 }
@@ -449,7 +453,7 @@ about_section
     max-width: 100%;
     min-height: 100vh;
     background: #3756A6;
-    padding: 50px 20px;
+    padding: 70px 20px;
 }
 
 .about .title{
@@ -555,7 +559,6 @@ tokenomics_section_starts
     border-bottom: 2px solid #38CEB3;
     max-width: 100%;
     height: fit-content;
-    /* min-height: 100vh; */
     padding: 20px;
     background-color: #6C8AE1;
 }
@@ -663,12 +666,11 @@ ROAD_MAP_SECTION_STARTS
     width: 100%;
     height: fit-content;
     background-color: #3554A6;
-    /* padding-bottom: 40vh; */
 }
 
 @media screen and (max-width:790px) {
     .road-map{
-        padding-bottom: 50vh;
+        padding-bottom: 20vh;
     }
 }
 
