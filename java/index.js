@@ -6,6 +6,7 @@
     header.classList.toggle('animate-nav', windowPosition);
 });
 
+ 
 // mediaa-navigation
 const  navSlide = () => {
     const burger =document.querySelector('.burger');

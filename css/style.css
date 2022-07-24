@@ -9,6 +9,7 @@ Global_stles
     /* border: 2px solid blue; */
 }
 
+
 html{
     scroll-behavior: smooth;
 }
@@ -44,7 +45,9 @@ nav{
 
 .logo img{
     width: 210px;
+    /* width: 30px; */
     height: auto;
+    /* height: 30px; */
 }
 
 nav li{
